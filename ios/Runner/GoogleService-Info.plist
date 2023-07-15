@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.fernandoherrera.push-app</string>
+	<string>com.julioferreryra.push-app</string>
 	<key>PROJECT_ID</key>
 	<string>flutter-projects-cb336</string>
 	<key>STORAGE_BUCKET</key>
