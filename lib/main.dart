@@ -14,9 +14,14 @@ void main() async {
   await NotificationsBloc.initializeFCM();
   await LocalNotifications.initializeLocalNotifications();
 
-  runApp(MultiBlocProvider(
-      providers: [BlocProvider(create: (_) => NotificationsBloc())],
-      child: const MainApp()));
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider(
+      create: (_) => NotificationsBloc(
+          requestLocalNotificationPermissions:
+              LocalNotifications.initializeLocalNotifications,
+          showLocalNotification: LocalNotifications.showLocalNotification),
+    )
+  ], child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
